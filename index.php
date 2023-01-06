@@ -3,6 +3,7 @@ session_start();
 include('includes/config.php');
 error_reporting(0);
 //Test
+//Test 2
 ?>
 
 <!DOCTYPE HTML>
