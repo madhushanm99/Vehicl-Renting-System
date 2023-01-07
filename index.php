@@ -2,7 +2,6 @@
 session_start();
 include('includes/config.php');
 error_reporting(0);
-//Test
 //Test 2
 ?>
 
@@ -45,7 +44,7 @@ error_reporting(0);
 <body>
 
 
-  <?php include('includes/header.php'); ?>
+<?php include('includes/header.php');?>
 
   <section id="banner" class="banner-section">
     <div class="container">
