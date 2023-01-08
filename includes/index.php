@@ -69,7 +69,7 @@ error_reporting(0);
       
       <div class="recent-tab">
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">Resents</a></li>
+          <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">Recent Vehicles</a></li>
         </ul>
       </div>
       

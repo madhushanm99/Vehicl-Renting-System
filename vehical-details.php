@@ -687,10 +687,10 @@ if (isset($_POST['submitMsg'])) {
               <input type="hidden" name="price" valuse="<?php echo $_SESSION['price']; ?>">
               <div class="form-group">
                 <input type="date" class="form-control" id="fromdate" name="fromdate"
-                  placeholder="From Date(dd/mm/yyyy)" required>
+                  placeholder="From Date(dd/mm/yyyy)" min="<?php echo date_create()->format("Y-m-d"); ?>" max="<?php echo date_create()->modify("+7 days")->format("Y-m-d"); ?>" required>
               </div>
               <div class="form-group">
-                <input type="date" class="form-control" id="todate" name="todate" placeholder="To Date(dd/mm/yyyy)"
+                <input type="date" class="form-control" id="todate" name="todate" min="<?php echo date_create()->modify("+1 days")->format("Y-m-d"); ?>" max="<?php echo date_create()->modify("+15 days")->format("Y-m-d"); ?>"  placeholder="To Date(dd/mm/yyyy)"
                   required>
               </div>
               <div class="form-group">

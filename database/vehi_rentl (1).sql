@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2023 at 05:04 AM
+-- Generation Time: Jan 08, 2023 at 04:58 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -51,6 +51,8 @@ CREATE TABLE `tblbooking` (
   `id` int(11) NOT NULL,
   `userEmail` varchar(100) DEFAULT NULL,
   `VehicleId` int(11) DEFAULT NULL,
+  `Price` int(6) NOT NULL DEFAULT 0,
+  `service_fee` int(11) NOT NULL DEFAULT 0,
   `FromDate` varchar(20) DEFAULT NULL,
   `ToDate` varchar(20) DEFAULT NULL,
   `message` varchar(255) DEFAULT NULL,
@@ -62,21 +64,23 @@ CREATE TABLE `tblbooking` (
 -- Dumping data for table `tblbooking`
 --
 
-INSERT INTO `tblbooking` (`id`, `userEmail`, `VehicleId`, `FromDate`, `ToDate`, `message`, `Status`, `PostingDate`) VALUES
-(16, 'abcdefg@gmail.com', 42, '20/11/2021', '22/10/2022', 'Book', 0, '2022-11-19 09:19:16'),
-(17, 'abcdefg@gmail.com', 40, '20/11/2021', '22/11/2021', 'b', 2, '2022-11-19 11:34:56'),
-(18, 'abcdefg@gmail.com', 42, '20/11/2021', '22/11/2021', '444', 0, '2022-11-19 14:33:57'),
-(19, 'Nishmi@gmail.com', 42, '20/11/2021', '22/10/2022', '44', 0, '2022-11-30 03:33:25'),
-(20, 'Nishmi@gmail.com', 44, '20/11/2021', '22/11/2021', '444', 0, '2022-12-04 01:17:13'),
-(21, 'Nishmi@gmail.com', 45, '20/11/2021', '22/10/2022', 'ddddd', 2, '2022-12-26 11:07:56'),
-(29, 'Nishmi@gmail.com', 42, '20/11/2021', '22/10/2022', NULL, 2, '2023-01-01 00:50:31'),
-(30, 'Nishmi@gmail.com', 45, '20/11/2021', '22/11/2021', NULL, 1, '2023-01-01 00:51:08'),
-(31, 'Nishmi@gmail.com', 42, '20/11/2021', '22/10/2022', NULL, 1, '2023-01-01 02:33:29'),
-(32, 'Nishmi@gmail.com', 42, '20/11/2021', '22/10/2022', '12222', 2, '2023-01-01 02:38:07'),
-(33, 'Nishmi@gmail.com', 49, '20/11/2021', '22/10/2022', '5545565', 1, '2023-01-01 03:22:23'),
-(34, 'Nishmi@gmail.com', 40, '21/02/2023', '22/02/2023', 'message', 1, '2023-01-01 09:02:10'),
-(35, 'Nishmi@gmail.com', 42, '2023-01-04', '2023-01-12', 'kkkkkkkkkk', 0, '2023-01-01 18:15:42'),
-(36, 'Isruri@gmail.com', 42, '2023-01-04', '2023-01-12', 'kkkkkkkkkk', 0, '2023-01-01 18:15:42');
+INSERT INTO `tblbooking` (`id`, `userEmail`, `VehicleId`, `Price`, `service_fee`, `FromDate`, `ToDate`, `message`, `Status`, `PostingDate`) VALUES
+(16, 'abcdefg@gmail.com', 42, 4005, 3, '20/11/2021', '22/10/2022', 'Hii! I would Like to Rent this Vehicle.', 3, '2022-11-19 09:19:16'),
+(17, 'abcdefg@gmail.com', 40, 8000, 3, '20/11/2021', '22/11/2021', 'Hii! I would Like to Rent this Vehicle.', 2, '2022-11-19 11:34:56'),
+(18, 'abcdefg@gmail.com', 42, 4005, 3, '20/11/2021', '22/11/2021', 'Hii! I would Like to Rent this Vehicle.', 0, '2022-11-19 14:33:57'),
+(19, 'Nishmi@gmail.com', 42, 4005, 3, '20/11/2021', '22/10/2022', 'Hii! I would Like to Rent this Vehicle.', 0, '2022-11-30 03:33:25'),
+(20, 'Nishmi@gmail.com', 44, 4005, 3, '20/11/2021', '22/11/2021', 'Hii! I would Like to Rent this Vehicle.', 0, '2022-12-04 01:17:13'),
+(21, 'Nishmi@gmail.com', 45, 4000, 3, '20/11/2021', '22/10/2022', 'Hii! I would Like to Rent this Vehicle.', 2, '2022-12-26 11:07:56'),
+(29, 'Nishmi@gmail.com', 42, 4005, 3, '20/11/2021', '22/10/2022', 'Hii! I would Like to Rent this Vehicle.', 2, '2023-01-01 00:50:31'),
+(30, 'Nishmi@gmail.com', 45, 4000, 3, '20/11/2021', '22/11/2021', 'Hii! I would Like to Rent this Vehicle.', 1, '2023-01-01 00:51:08'),
+(31, 'Nishmi@gmail.com', 42, 4005, 3, '20/11/2021', '22/10/2022', 'Hii! I would Like to Rent this Vehicle.', 1, '2023-01-01 02:33:29'),
+(32, 'Nishmi@gmail.com', 42, 4005, 3, '20/11/2021', '22/10/2022', 'Hii! I would Like to Rent this Vehicle.', 2, '2023-01-01 02:38:07'),
+(33, 'Nishmi@gmail.com', 49, 5000, 3, '20/11/2021', '22/10/2022', 'Hii! I would Like to Rent this Vehicle.', 1, '2023-01-01 03:22:23'),
+(34, 'Nishmi@gmail.com', 40, 8000, 3, '21/02/2023', '22/02/2023', 'Hii! I would Like to Rent this Vehicle.', 1, '2023-01-01 09:02:10'),
+(35, 'Nishmi@gmail.com', 42, 4005, 3, '2023-01-04', '2023-01-12', 'Hii! I would Like to Rent this Vehicle.', 0, '2023-01-01 18:15:42'),
+(36, 'Isruri@gmail.com', 42, 4005, 3, '2023-01-04', '2023-01-12', 'Hii! I would Like to Rent this Vehicle.', 0, '2023-01-01 18:15:42'),
+(37, 'Isruri@gmail.com', 40, 8000, 3, '2023-01-07', '2023-01-08', 'Hii! I would Like to Rent this Vehicle.', 0, '2023-01-06 04:34:41'),
+(38, 'Nishmi@gmail.com', 40, 8000, 3, '2023-01-08', '2023-01-10', 'Hii! I would Like to Rent this Vehicle.', 0, '2023-01-06 23:38:56');
 
 -- --------------------------------------------------------
 
@@ -123,18 +127,18 @@ CREATE TABLE `tblcontactowner` (
 --
 
 INSERT INTO `tblcontactowner` (`id`, `emailId`, `message`, `vehicleId`, `postingDate`, `status`) VALUES
-(1, 'Nishmi@gmail.com', 'dadsads', 45, '2022-12-28 04:47:18', 1),
-(2, 'Nishmi@gmail.com', 'dadsads', 42, '2022-12-28 04:47:18', 1),
-(3, 'Nishmi@gmail.com', 'dadsads', 40, '2022-12-28 04:47:18', 1),
-(4, 'Nishmi@gmail.com', 'dadsads', 44, '2022-12-28 04:47:18', 1),
-(5, 'Nishmi@gmail.com', 'jjjjjjjjj', 45, '2022-12-29 04:05:21', 0),
-(6, 'Nishmi@gmail.com', 'hjjjjjhjhjh', 45, '2022-12-30 18:56:42', 0),
-(7, 'Nishmi@gmail.com', 'ghghghjjhjj', 45, '2022-12-30 19:09:01', 0),
-(8, 'madhushanm99@gmail.coma', '123456', 40, '2022-12-31 05:57:03', 0),
-(9, 'Nishmi@gmail.com', 'Test 02', 45, '2023-01-01 01:23:10', 1),
-(12, 'Nishmi@gmail.com', 'jkabkfjbskjbf', 49, '2023-01-01 03:21:14', 0),
-(13, 'Nishmi@gmail.com', '123456789', 49, '2023-01-01 03:35:24', 0),
-(14, 'Nishmi@gmail.com', 'ksbnbvlksndvlkn\r\n', 49, '2023-01-01 04:08:47', 1);
+(1, 'Nishmi@gmail.com', 'How is the running condition of this car?', 45, '2022-12-28 04:47:18', 1),
+(2, 'Nishmi@gmail.com', 'How is the running condition of this car?', 42, '2022-12-28 04:47:18', 1),
+(3, 'Nishmi@gmail.com', 'How is the running condition of this car?', 40, '2022-12-28 04:47:18', 1),
+(4, 'Nishmi@gmail.com', 'How is the running condition of this car?', 44, '2022-12-28 04:47:18', 1),
+(5, 'Nishmi@gmail.com', 'How is the running condition of this car?', 45, '2022-12-29 04:05:21', 0),
+(6, 'Nishmi@gmail.com', 'How is the running condition of this car?', 45, '2022-12-30 18:56:42', 0),
+(7, 'Nishmi@gmail.com', 'How is the running condition of this car?', 45, '2022-12-30 19:09:01', 0),
+(8, 'madhushanm99@gmail.coma', 'How is the running condition of this car?', 40, '2022-12-31 05:57:03', 0),
+(9, 'Nishmi@gmail.com', 'How is the running condition of this car?', 45, '2023-01-01 01:23:10', 1),
+(12, 'Nishmi@gmail.com', 'How is the running condition of this car?', 49, '2023-01-01 03:21:14', 0),
+(13, 'Nishmi@gmail.com', 'How is the running condition of this car?', 49, '2023-01-01 03:35:24', 0),
+(14, 'Nishmi@gmail.com', 'Test 01', 49, '2023-01-01 04:08:47', 1);
 
 -- --------------------------------------------------------
 
@@ -157,20 +161,20 @@ CREATE TABLE `tblcontactusquery` (
 --
 
 INSERT INTO `tblcontactusquery` (`id`, `Fname`, `EmailId`, `ContactNumber`, `Message`, `PostingDate`, `status`) VALUES
-(1, 'Manura Madhushan', 'madhushanm99@gmail.com', '0713698026', 'aaaaaaaaaaaaaaaaaassssssssssss', '2022-06-18 10:03:07', 1),
-(8, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'yyyyy', '2022-11-29 02:56:27', 1),
-(9, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', '77777', '2022-11-29 02:59:38', 1),
-(10, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', '77777', '2022-11-29 02:59:52', 1),
-(11, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'ssssqqaa', '2022-11-29 03:00:46', 0),
-(12, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'ssssqqaa', '2022-11-29 03:02:29', 0),
-(13, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', '4455555', '2022-11-29 03:04:17', 0),
-(14, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'ssss', '2022-11-29 03:09:23', 0),
-(15, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'ssss', '2022-11-29 03:10:54', 0),
-(16, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'aaasas', '2022-11-29 03:11:13', 0),
-(17, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'ssss', '2022-11-29 03:12:31', 0),
-(18, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', '211351', '2022-12-30 19:10:49', 0),
-(19, 'Manura Madhushan', 'madhushanm99@gmail.coma', '0713698026', 'Testing01', '2022-12-31 03:00:07', 1),
-(20, 'Rashmi Nishmi', 'rash@gmail.com', '0712345678', 'Achchit hal grpn', '2023-01-01 01:00:56', 1);
+(1, 'Manura Madhushan', 'madhushanm99@gmail.com', '0713698026', 'How can I rent this car?', '2022-06-18 10:03:07', 1),
+(8, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'How can I rent this car?', '2022-11-29 02:56:27', 1),
+(9, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'How can I rent this car?', '2022-11-29 02:59:38', 1),
+(10, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'How can I rent this car?', '2022-11-29 02:59:52', 1),
+(11, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'How can I rent this car?', '2022-11-29 03:00:46', 0),
+(12, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'How can I rent this car?', '2022-11-29 03:02:29', 0),
+(13, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'How can I rent this car?', '2022-11-29 03:04:17', 0),
+(14, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'How can I rent this car?', '2022-11-29 03:09:23', 0),
+(15, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'How can I rent this car?', '2022-11-29 03:10:54', 0),
+(16, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'How can I rent this car?', '2022-11-29 03:11:13', 0),
+(17, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'How can I rent this car?', '2022-11-29 03:12:31', 0),
+(18, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', '0713698026', 'How can I rent this car?', '2022-12-30 19:10:49', 0),
+(19, 'Manura Madhushan', 'madhushanm99@gmail.coma', '0713698026', 'How can I rent this car?', '2022-12-31 03:00:07', 1),
+(20, 'Rashmi Nishmi', 'rash@gmail.com', '0712345678', 'How can I rent this car?', '2023-01-01 01:00:56', 1);
 
 -- --------------------------------------------------------
 
@@ -193,28 +197,28 @@ CREATE TABLE `tblreview` (
 --
 
 INSERT INTO `tblreview` (`id`, `UserEmail`, `VehicleId`, `Rate`, `Feedback`, `PostingDate`, `status`) VALUES
-(7, 'abcdefg@gmail.com', 42, 3, '001', '2022-11-19 10:51:08', 1),
-(8, 'abcdefg@gmail.com', 42, 3, 'For those saying \"it works for me\", the behavior of echo varies quite a bit between versions. Some will even print the \"-e\" as part of their output. If you want predictable behavior for anything 003 nontrivial, use printf instead.I could not get any of the suggestions in this answer working, because, as it turns out.', '2022-11-19 10:52:55', 0),
-(9, 'abcdefg@gmail.com', 42, 3, 'For those saying \"it works for me\", the behavior of echo varies quite a bit between versions. Some will even print the \"-e\" as part of their output. If you want predictable behavior for anything 003 nontrivial, use printf instead.I could not get any of the suggestions in this answer working, because, as it turns out.', '2022-11-19 11:03:47', 0),
-(12, 'abcdefg@gmail.com', 40, 4, '004', '2022-11-19 11:35:05', 1),
-(14, 'abcdefg@gmail.com', 40, 4, '005', '2022-11-19 11:47:05', 1),
-(16, 'abcdefg@gmail.com', 45, 4, '006', '2022-11-19 11:47:30', 0),
-(42, 'Nishmi@gmail.com', 45, 3, 'ddddddd', '2022-12-26 11:08:03', 0),
-(43, 'Nishmi@gmail.com', 45, 4, 'mmmmm', '2022-12-29 04:05:48', 0),
-(44, 'Nishmi@gmail.com', 45, 3, '11111', '2022-12-30 18:56:02', 0),
-(45, 'Nishmi@gmail.com', 45, 3, '2121313', '2022-12-30 19:01:41', 0),
-(46, 'Nishmi@gmail.com', 45, 3, 'sssssss', '2022-12-30 19:03:41', 0),
-(47, 'Nishmi@gmail.com', 45, 3, 'sssssss', '2022-12-30 19:03:58', 0),
-(48, 'Nishmi@gmail.com', 45, 3, 'sssssss', '2022-12-30 19:08:26', 0),
-(49, 'Nishmi@gmail.com', 45, 3, 'vvvvvv', '2022-12-30 19:08:33', 0),
-(50, 'madhushanm99@gmail.coma', 40, 3, '111222', '2022-12-31 05:56:18', 0),
-(51, 'Nishmi@gmail.com', 45, 3, 'Test 01', '2023-01-01 00:54:10', 0),
-(52, 'Nishmi@gmail.com', 45, 3, 'Test 01', '2023-01-01 00:55:28', 1),
-(53, 'Nishmi@gmail.com', 49, 3, '111222333445566', '2023-01-01 03:22:34', 0),
-(54, 'Nishmi@gmail.com', 49, 3, '11222ssss', '2023-01-01 03:24:03', 0),
-(55, 'Nishmi@gmail.com', 42, 4, 'Test', '2023-01-01 18:13:11', 0),
-(56, 'Nishmi@gmail.com', 42, 4, 'Test', '2023-01-01 18:14:19', 0),
-(57, 'Nishmi@gmail.com', 40, 3, 'Testing', '2023-01-05 05:48:18', 0);
+(7, 'abcdefg@gmail.com', 42, 3, 'This was really awesome car. and This Provider is cool. ', '2022-11-19 10:51:08', 1),
+(8, 'abcdefg@gmail.com', 42, 3, 'This was really awesome car. and This Provider is cool. ', '2022-11-19 10:52:55', 0),
+(9, 'abcdefg@gmail.com', 42, 3, 'This was really awesome car. and This Provider is cool. ', '2022-11-19 11:03:47', 0),
+(12, 'abcdefg@gmail.com', 40, 4, 'This was really awesome car. and This Provider is cool. ', '2022-11-19 11:35:05', 1),
+(14, 'abcdefg@gmail.com', 40, 4, 'This was really awesome car. and This Provider is cool. ', '2022-11-19 11:47:05', 1),
+(16, 'abcdefg@gmail.com', 45, 4, 'This was really awesome car. and This Provider is cool. ', '2022-11-19 11:47:30', 0),
+(42, 'Nishmi@gmail.com', 45, 3, 'This was really awesome car. and This Provider is cool. ', '2022-12-26 11:08:03', 0),
+(43, 'Nishmi@gmail.com', 45, 4, 'This was really awesome car. and This Provider is cool. ', '2022-12-29 04:05:48', 0),
+(44, 'Nishmi@gmail.com', 45, 3, 'This was really awesome car. and This Provider is cool. ', '2022-12-30 18:56:02', 0),
+(45, 'Nishmi@gmail.com', 45, 3, 'This was really awesome car. and This Provider is cool. ', '2022-12-30 19:01:41', 0),
+(46, 'Nishmi@gmail.com', 45, 3, 'This was really awesome car. and This Provider is cool. ', '2022-12-30 19:03:41', 0),
+(47, 'Nishmi@gmail.com', 45, 3, 'This was really awesome car. and This Provider is cool. ', '2022-12-30 19:03:58', 0),
+(48, 'Nishmi@gmail.com', 45, 3, 'This was really awesome car. and This Provider is cool. ', '2022-12-30 19:08:26', 0),
+(49, 'Nishmi@gmail.com', 45, 3, 'This was really awesome car. and This Provider is cool. ', '2022-12-30 19:08:33', 0),
+(50, 'madhushanm99@gmail.coma', 40, 3, 'This was really awesome car. and This Provider is cool. ', '2022-12-31 05:56:18', 0),
+(51, 'Nishmi@gmail.com', 45, 3, 'This was really awesome car. and This Provider is cool. ', '2023-01-01 00:54:10', 0),
+(52, 'Nishmi@gmail.com', 45, 3, 'This was really awesome car. and This Provider is cool. ', '2023-01-01 00:55:28', 1),
+(53, 'Nishmi@gmail.com', 49, 3, 'This was really awesome car. and This Provider is cool. ', '2023-01-01 03:22:34', 0),
+(54, 'Nishmi@gmail.com', 49, 3, 'This was really awesome car. and This Provider is cool. ', '2023-01-01 03:24:03', 0),
+(55, 'Nishmi@gmail.com', 42, 4, 'This was really awesome car. and This Provider is cool. ', '2023-01-01 18:13:11', 0),
+(56, 'Nishmi@gmail.com', 42, 4, 'This was really awesome car. and This Provider is cool. ', '2023-01-01 18:14:19', 0),
+(57, 'Nishmi@gmail.com', 40, 3, 'This was really awesome car. and This Provider is cool. ', '2023-01-05 05:48:18', 0);
 
 -- --------------------------------------------------------
 
@@ -224,14 +228,14 @@ INSERT INTO `tblreview` (`id`, `UserEmail`, `VehicleId`, `Rate`, `Feedback`, `Po
 
 CREATE TABLE `tblusers` (
   `id` int(11) NOT NULL,
-  `FullName` varchar(120) DEFAULT NULL,
+  `FullName` varchar(120) DEFAULT 'aaaa',
   `EmailId` varchar(100) DEFAULT NULL,
   `Password` varchar(100) DEFAULT NULL,
   `ContactNo` char(11) DEFAULT NULL,
   `dob` varchar(100) DEFAULT NULL,
   `Address` varchar(255) DEFAULT NULL,
-  `City` varchar(100) DEFAULT NULL,
-  `Country` varchar(100) DEFAULT NULL,
+  `City` varchar(100) DEFAULT 'Nugegoda',
+  `Country` varchar(100) DEFAULT 'Sri Lanka',
   `RegDate` timestamp NULL DEFAULT current_timestamp(),
   `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
   `UserType` int(11) DEFAULT 0
@@ -242,22 +246,23 @@ CREATE TABLE `tblusers` (
 --
 
 INSERT INTO `tblusers` (`id`, `FullName`, `EmailId`, `Password`, `ContactNo`, `dob`, `Address`, `City`, `Country`, `RegDate`, `UpdationDate`, `UserType`) VALUES
-(10, 'Manura Madhushan', 'madhushanm99@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0713698025', '', '', '', '', '2022-07-26 13:18:55', '2022-12-26 11:06:41', 0),
-(11, 'Manura Madhushan Provider', 'madhushanm99@gmail.com2', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', '', '', '', '', '2022-07-26 17:29:32', '2022-12-26 11:06:59', 1),
-(12, 'Eshan Perera', 'eshanperera@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', '', '150/7, Golden Grow , Kospelawinna,', 'Rathnapura', 'Sri Lanka', '2022-07-26 18:42:50', '2022-12-30 12:22:55', 1),
-(14, 'Manura ', 'madhushanm99@gmail.com55', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', NULL, NULL, NULL, NULL, '2022-07-27 04:03:01', '2022-12-26 11:06:59', 0),
-(15, 'Rashmi Nishmi', 'Nishmi@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0729761336', '2000-01-13', '', 'Maharagama', 'Sri Lanka', '2022-09-08 04:03:10', '2023-01-01 18:08:47', 0),
-(16, 'Madhawa Rusiru', 'l.h.madhawa@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0702024672', NULL, NULL, NULL, NULL, '2022-09-08 05:53:34', '2022-12-26 11:06:59', 1),
-(17, 'Nirmani Dinithi', 'Nirmani@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0717269374', NULL, NULL, NULL, NULL, '2022-09-08 07:15:05', '2022-12-26 11:06:59', 0),
-(18, 'Isuri Bashitha', 'Isruri@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0712345678', '01/01/1999', 'xkcxckxkxk', 'skcnksnc', 'ksckkcsna', '2022-09-24 04:55:03', '2022-12-26 11:06:59', 0),
-(19, 'abcde', 'abcdefg@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0712233675', NULL, NULL, NULL, NULL, '2022-09-24 05:11:54', '2022-12-26 11:06:59', 0),
-(20, 'eshan perera', 'eshan@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0719958599', NULL, NULL, NULL, NULL, '2022-09-24 05:16:06', NULL, 1),
-(21, 'Rashmi Nishmi', 'rash@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0112160472', '2000-01-02', NULL, NULL, NULL, '2022-09-24 05:53:58', '2023-01-01 18:01:16', 1),
-(22, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', NULL, NULL, NULL, NULL, '2022-12-30 05:14:04', '2023-01-01 07:23:08', 0),
-(23, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', NULL, NULL, NULL, NULL, '2022-12-30 05:15:46', '2023-01-01 07:23:08', 0),
-(24, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', NULL, NULL, NULL, NULL, '2022-12-30 17:11:41', '2023-01-01 07:22:42', 0),
-(25, 'Madhushan Manura', 'madhushanm99@gmail.coma', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', '01/01/1999', 'No 123, road', 'Homagama', 'Sri Lanka', '2022-12-31 02:46:44', '2022-12-31 03:20:15', 0),
-(26, 'Eshan Perera 02', 'eshanperera@gmail.coma', 'e10adc3949ba59abbe56e057f20f883e', '0712345678', '01/01/2000', 'No: 123 abc road ', 'Colombo', 'Sri Lanka', '2023-01-01 01:32:07', '2023-01-01 01:53:47', 1);
+(0, 'Admin', 'admin@vehi.lk', '1234', NULL, '1234', NULL, 'Nugegoda', 'Sri Lanka', '2023-01-08 14:18:54', '2023-01-08 14:19:39', 0),
+(10, 'Manura Madhushan', 'madhushanm99@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0713698025', '2000-01-01', 'No 123, abc road', 'Nugegoda', 'Sri Lanka', '2022-07-26 13:18:55', '2023-01-07 13:56:03', 0),
+(11, 'Manura Madhushan Provider', 'madhushanm99@gmail.com2', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', '2000-01-01', 'No 123, abc road', 'Nugegoda', 'Sri Lanka', '2022-07-26 17:29:32', '2023-01-07 13:56:16', 1),
+(12, 'Eshan Perera', 'eshanperera@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', '2000-01-01', '150/7, Golden Grow , Kospelawinna,', 'Rathnapura', 'Sri Lanka', '2022-07-26 18:42:50', '2023-01-07 13:54:14', 1),
+(14, 'Manura ', 'madhushanm99@gmail.com55', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', '2000-01-01', 'No 123, abc road', 'Rathnapura', 'Sri Lanka', '2022-07-27 04:03:01', '2023-01-07 13:56:16', 0),
+(15, 'Rashmi Nishmi', 'Nishmi@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '0729761336', '2000-01-01', 'No 123, abc road', 'Maharagama', 'Sri Lanka', '2022-09-08 04:03:10', '2023-01-08 10:11:33', 0),
+(17, 'Nirmani Dinithi', 'Nirmani@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0717269374', '2000-01-01', 'No 123, abc road', 'Kagale', 'Sri Lanka', '2022-09-08 07:15:05', '2023-01-07 13:56:16', 0),
+(18, 'Isuri Bashitha', 'Isruri@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0712345678', '2000-01-01', 'No 123, abc road', 'Kaluthara', 'Sri Lanka', '2022-09-24 04:55:03', '2023-01-07 13:56:16', 0),
+(19, 'abcde Test', 'abcdefg@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0712233675', '2000-01-01', 'No 123, abc road', 'Nugegoda', 'Sri Lanka', '2022-09-24 05:11:54', '2023-01-07 13:56:16', 0),
+(20, 'eshan perera', 'eshan@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0719958599', '2000-01-01', 'No 123, abc road', 'Nugegoda', 'Sri Lanka', '2022-09-24 05:16:06', '2023-01-07 13:56:16', 1),
+(21, 'Rashmi Nishmi', 'rash@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0112160472', '2000-01-01', 'No 123, abc road', 'Maharagama', 'Sri Lanka', '2022-09-24 05:53:58', '2023-01-07 13:56:16', 1),
+(22, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', '2000-01-01', 'No 123, abc road', 'Nugegoda', 'Sri Lanka', '2022-12-30 05:14:04', '2023-01-07 13:56:16', 0),
+(23, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', '2000-01-01', 'No 123, abc road', 'Kalaniya', 'Sri Lanka', '2022-12-30 05:15:46', '2023-01-07 13:56:16', 0),
+(24, 'M.A.Manura Madhushan Munasingha', 'madhushanm99@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', '2000-01-01', 'No 123, abc road', 'Hanwalla', 'Sri Lanka', '2022-12-30 17:11:41', '2023-01-07 13:56:16', 0),
+(25, 'Madhushan Manura', 'madhushanm99@gmail.coma', 'e10adc3949ba59abbe56e057f20f883e', '0713698026', '2000-01-01', 'No 123, road', 'Homagama', 'Sri Lanka', '2022-12-31 02:46:44', '2023-01-07 13:54:14', 0),
+(26, 'Eshan Perera 02', 'eshanperera@gmail.coma', 'e10adc3949ba59abbe56e057f20f883e', '0712345678', '2000-01-01', 'No: 123 abc road ', 'Colombo', 'Sri Lanka', '2023-01-01 01:32:07', '2023-01-07 13:54:14', 1),
+(27, 'M.A.Manura Madhushan Munasingha', 'gfcdyfyfyu@cffg.nn', '81dc9bdb52d04dc20036dbd8313ed055', '0713698026', NULL, NULL, 'Nugegoda', 'Sri Lanka', '2023-01-08 10:07:54', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -294,21 +299,22 @@ CREATE TABLE `tblvehicles` (
   `LeatherSeats` int(11) DEFAULT NULL,
   `RegDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
-  `status` int(11) NOT NULL DEFAULT 1
+  `status` int(11) NOT NULL DEFAULT 1,
+  `service_fee` int(11) NOT NULL DEFAULT 3
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblvehicles`
 --
 
-INSERT INTO `tblvehicles` (`id`, `VehiclesTitle`, `VehicleProviderid`, `VehiclesBrand`, `VehiclesOverview`, `PricePerDay`, `FuelType`, `ModelYear`, `SeatingCapacity`, `Vimage1`, `Vimage2`, `Vimage3`, `Vimage4`, `Vimage5`, `AirConditioner`, `PowerDoorLocks`, `AntiLockBrakingSystem`, `BrakeAssist`, `PowerSteering`, `DriverAirbag`, `PassengerAirbag`, `PowerWindows`, `CDPlayer`, `CentralLocking`, `CrashSensor`, `LeatherSeats`, `RegDate`, `UpdationDate`, `status`) VALUES
-(40, 'Corolla', 0, 4, 'Toyota Corolla', 8000, 'Petrol', 2016, 5, 'assets/vimg/356024172.jpg', 'assets/vimg/187100242.jpg', 'assets/vimg/161004512.jpg', 'assets/vimg/888320168.jpg', 'assets/vimg/493559966.jpg', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2022-10-11 05:27:45', '2023-01-01 08:41:00', 1),
-(42, 'GTR', 12, 1, 'Nissan GTR', 4005, 'Petrol', 2017, 3, 'assets/vimg/582799967.jpg', 'assets/vimg/678052698.jpg', 'assets/vimg/999031330.jpg', 'assets/vimg/396556003.jpg', 'assets/vimg/652252801.jpg', 1, NULL, NULL, NULL, 1, NULL, 1, 1, 1, 1, 1, 1, '2022-10-11 05:30:13', '2023-01-01 02:33:07', 0),
-(44, 'GTR', 12, 1, 'Nissan GTR', 4005, 'Petrol', 2017, 3, 'assets/vimg/582799967.jpg', 'assets/vimg/678052698.jpg', 'assets/vimg/999031330.jpg', 'assets/vimg/396556003.jpg', 'assets/vimg/652252801.jpg', 1, NULL, NULL, NULL, 1, NULL, 1, 1, 1, 1, 1, 1, '2022-10-11 05:30:13', '2022-11-29 16:18:28', 1),
-(45, 'Corolla', 0, 4, 'Toyota Corolla', 4000, 'Diesel', 2016, 5, 'assets/vimg/991995052.jpg', 'assets/vimg/187100242.jpg', 'assets/vimg/474395238.jpg', 'assets/vimg/888320168.jpg', 'assets/vimg/493559966.jpg', 1, 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, '2022-10-11 05:27:45', '2023-01-01 09:22:35', 0),
-(48, 'WagonR', 0, 9, 'Suzuki Wagon R', 5000, 'Petrol', 2018, 5, 'assets/vimg/629200388.jpg', 'assets/vimg/473563670.jpg', 'assets/vimg/525803901.jpg', 'assets/vimg/205327993.jpg', 'assets/vimg/702005417.jpg', 1, NULL, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, NULL, '2023-01-01 02:55:11', NULL, 1),
-(49, 'Premio', 12, 4, 'Honda Premio', 5000, 'Petrol', 2015, 5, 'assets/vimg/894687261.jpg', 'assets/vimg/126919070.jpg', 'assets/vimg/787146876.jpg', 'assets/vimg/290346347.jpg', 'assets/vimg/603473587.jpg', 1, 1, NULL, NULL, 1, 1, NULL, NULL, 1, 1, NULL, NULL, '2023-01-01 03:13:15', '2023-01-01 03:15:46', 1),
-(50, 'Civic', 12, 4, 'Honda hhhh Civic', 5000, 'Petrol', 2015, 3, 'assets/vimg/937649562.jpg', 'assets/vimg/379733558.jpg', 'assets/vimg/573050850.jpg', 'assets/vimg/928530714.jpg', 'assets/vimg/609099016.jpg', 1, 1, 1, NULL, 1, 1, NULL, NULL, 1, 1, NULL, NULL, '2023-01-01 03:19:08', '2023-01-01 03:54:06', 1);
+INSERT INTO `tblvehicles` (`id`, `VehiclesTitle`, `VehicleProviderid`, `VehiclesBrand`, `VehiclesOverview`, `PricePerDay`, `FuelType`, `ModelYear`, `SeatingCapacity`, `Vimage1`, `Vimage2`, `Vimage3`, `Vimage4`, `Vimage5`, `AirConditioner`, `PowerDoorLocks`, `AntiLockBrakingSystem`, `BrakeAssist`, `PowerSteering`, `DriverAirbag`, `PassengerAirbag`, `PowerWindows`, `CDPlayer`, `CentralLocking`, `CrashSensor`, `LeatherSeats`, `RegDate`, `UpdationDate`, `status`, `service_fee`) VALUES
+(40, 'Corolla', 0, 4, 'Toyota Corolla', 8000, 'Petrol', 2016, 5, 'assets/vimg/356024172.jpg', 'assets/vimg/187100242.jpg', 'assets/vimg/161004512.jpg', 'assets/vimg/187100242.jpg', 'assets/vimg/356024172.jpg', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2022-10-11 05:27:45', '2023-01-08 14:40:19', 1, 100),
+(42, 'GTR', 12, 1, 'Nissan GTR', 4005, 'Petrol', 2017, 3, 'assets/vimg/582799967.jpg', 'assets/vimg/678052698.jpg', 'assets/vimg/999031330.jpg', 'assets/vimg/396556003.jpg', 'assets/vimg/652252801.jpg', 1, NULL, NULL, NULL, 1, NULL, 1, 1, 1, 1, 1, 1, '2022-10-11 05:30:13', '2023-01-01 02:33:07', 0, 3),
+(44, 'GTR', 12, 1, 'Nissan GTR', 4005, 'Petrol', 2017, 3, 'assets/vimg/582799967.jpg', 'assets/vimg/678052698.jpg', 'assets/vimg/999031330.jpg', 'assets/vimg/396556003.jpg', 'assets/vimg/652252801.jpg', 1, NULL, NULL, NULL, 1, NULL, 1, 1, 1, 1, 1, 1, '2022-10-11 05:30:13', '2022-11-29 16:18:28', 1, 3),
+(45, 'Corolla', 0, 4, 'Toyota Corolla', 4000, 'Diesel', 2016, 5, 'assets/vimg/991995052.jpg', 'assets/vimg/161004512.jpg', 'assets/vimg/991995052.jpg', 'assets/vimg/187100242.jpg', 'assets/vimg/493559966.jpg', 1, 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, '2022-10-11 05:27:45', '2023-01-08 14:40:15', 0, 100),
+(48, 'WagonR', 0, 9, 'Suzuki Wagon R', 5000, 'Petrol', 2018, 5, 'assets/vimg/629200388.jpg', 'assets/vimg/473563670.jpg', 'assets/vimg/525803901.jpg', 'assets/vimg/205327993.jpg', 'assets/vimg/702005417.jpg', 1, NULL, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, NULL, '2023-01-01 02:55:11', '2023-01-08 14:40:23', 1, 100),
+(49, 'Premio', 12, 4, 'Honda Premio', 5000, 'Petrol', 2015, 5, 'assets/vimg/894687261.jpg', 'assets/vimg/126919070.jpg', 'assets/vimg/787146876.jpg', 'assets/vimg/290346347.jpg', 'assets/vimg/603473587.jpg', 1, 1, NULL, NULL, 1, 1, NULL, NULL, 1, 1, NULL, NULL, '2023-01-01 03:13:15', '2023-01-01 03:15:46', 1, 3),
+(50, 'Civic', 12, 4, 'Honda hhhh Civic', 5000, 'Petrol', 2015, 3, 'assets/vimg/937649562.jpg', 'assets/vimg/379733558.jpg', 'assets/vimg/573050850.jpg', 'assets/vimg/928530714.jpg', 'assets/vimg/609099016.jpg', 1, 1, 1, NULL, 1, 1, NULL, NULL, 1, 1, NULL, NULL, '2023-01-01 03:19:08', '2023-01-01 03:54:06', 1, 3);
 
 --
 -- Indexes for dumped tables
@@ -377,7 +383,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `tblbooking`
 --
 ALTER TABLE `tblbooking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `tblbrands`
@@ -407,7 +413,7 @@ ALTER TABLE `tblreview`
 -- AUTO_INCREMENT for table `tblusers`
 --
 ALTER TABLE `tblusers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `tblvehicles`

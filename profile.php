@@ -197,11 +197,11 @@ if (strlen($_SESSION['login']) == 0) {
                   });
                   value=" 2000-01-01<?php //echo htmlentities($result->dob); ?>"
                 </script> -->
-
+                  
                 <div class="form-group">
                   <label class="control-label">Date of Birth&nbsp;(dd/mm/yyyy)</label>
                   <input class="form-control white_bg" name="dob" value="<?php echo htmlentities($result->dob); ?>"
-                     id="birth-date" type="date">
+                     id="birth-date" type="date" min="1930-01-01" max="<?php echo date_create()->format("Y-m-d"); ?>">  
                 </div>
                 <div class="form-group">
                   <label class="control-label">Your Address</label>

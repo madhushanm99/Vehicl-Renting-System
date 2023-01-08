@@ -32,7 +32,7 @@ function _get_mostBooked_vehicle($dbh, $start, $end)
 							<?php echo htmlentities($cnt); ?>
 						</td>
 						<td>
-							<?php echo htmlentities($result->Vimage1); ?>
+						<div class="recent_post_img"><img src="../<?php echo htmlentities($result->Vimage1);?>" height="50px" width="70px" alt="image"></a> </div>
 						</td>
 						<td>
 							<?php echo htmlentities($result->id); ?>
@@ -116,13 +116,13 @@ function _get_cansaledBooking($dbh, $start, $end)
 								<th>Customer Name</th>
 								<th>Email</th>
 								<th>City</th>
-								<th>Bookings</th>
+								<th>Cansalation</th>
 
 							</tr>
 						</thead>
 						<tbody>
 							<?php
-							$sql = "SELECT tblusers.id,tblusers.FullName,tblusers.EmailId,tblusers.City ,count(*) as `bookings`FROM `tblbooking` LEFT JOIN `tblusers` ON (`tblbooking`.`userEmail` = `tblusers`.`EmailId`)  WHERE `tblbooking`.`PostingDate`  between :StartD and :EndD group by `tblbooking`.`userEmail` order by bookings DESC;";
+							$sql = "SELECT tblusers.id,tblusers.EmailId,tblusers.City,tblbooking.Status ,count(*) as `cancelations`FROM `tblbooking` LEFT JOIN `tblusers` ON (`tblbooking`.`userEmail` = `tblusers`.`EmailId`) WHERE tblbooking.Status = 3 AND `tblbooking`.`PostingDate` between '2022-01-01' and '2023-01-01' group by `tblbooking`.`VehicleId` order by cancelations DESC;";
 							//$sql = "SELECT tblvehicles.Vimage1,tblvehicles.id,tblvehicles.VehiclesTitle,tblbrands.BrandName,count(*) as `bookings`FROM `tblbooking` LEFT JOIN `tblvehicles` ON (`tblbooking`.`VehicleId` = `tblvehicles`.`id`) left join `tblbrands` on `tblbrands`.id=`tblvehicles`.`VehiclesBrand` WHERE `tblbooking`.`PostingDate` between :StartD and :EndD group by `tblbooking`.`VehicleId` order by bookings DESC;";
 							$query = $dbh->prepare($sql);
 							$query->bindParam(':StartD', $start, PDO::PARAM_STR);
@@ -149,7 +149,7 @@ function _get_cansaledBooking($dbh, $start, $end)
 											<?php echo htmlentities($result->City); ?>
 										</td>
 										<td>
-											<?php echo htmlentities($result->bookings); ?>
+											<?php echo htmlentities($result->cancelations); ?>
 										</td>
 									</tr>
 									<?php $cnt = $cnt + 1;
@@ -175,7 +175,7 @@ function _get_topProvider($dbh, $start, $end)
 						</thead>
 						<tbody>
 							<?php
-							$sql = "SELECT tblusers.id,tblusers.FullName,tblusers.EmailId,tblusers.City ,count(*) as `bookings`FROM `tblbooking` LEFT JOIN `tblusers` ON (`tblbooking`.`userEmail` = `tblusers`.`EmailId`)  WHERE `tblbooking`.`PostingDate`  between :StartD and :EndD group by `tblbooking`.`userEmail` order by bookings DESC;";
+							$sql = "SELECT `tblUsers`.`FullName`,COUNT(*) as `bookings` FROM `tblbooking` left join `tblvehicles` on (`tblbooking`.`VehicleId` = `tblVehicles`.`id`) left join `tblUsers` ON ( `tblVehicles`.`VehicleProviderid` = `tblUsers`.`id` ) WHERE `tblbooking`.`Status` = 1 AND (`tblbooking`.`PostingDate`  between '2022-01-01' and '2024-01-01') GROUP BY `tblUsers`.`id`";
 							//$sql = "SELECT tblvehicles.Vimage1,tblvehicles.id,tblvehicles.VehiclesTitle,tblbrands.BrandName,count(*) as `bookings`FROM `tblbooking` LEFT JOIN `tblvehicles` ON (`tblbooking`.`VehicleId` = `tblvehicles`.`id`) left join `tblbrands` on `tblbrands`.id=`tblvehicles`.`VehiclesBrand` WHERE `tblbooking`.`PostingDate` between :StartD and :EndD group by `tblbooking`.`VehicleId` order by bookings DESC;";
 							$query = $dbh->prepare($sql);
 							$query->bindParam(':StartD', $start, PDO::PARAM_STR);
@@ -425,7 +425,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 													} else if ($report == "mostOutPer") {
 														echo _get_mostOut_customer($dbh, $start, $end);
 													} else if ($report == "cncelBo") {
-														echo _get_mostOut_customer($dbh, $start, $end);
+														echo _get_cansaledBooking($dbh, $start, $end);
 													}
 													else if ($report == "topPrvdr") {
 														echo _get_mostOut_customer($dbh, $start, $end);

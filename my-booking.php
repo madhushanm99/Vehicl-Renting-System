@@ -132,6 +132,7 @@ if (strlen($_SESSION['login']) == 0) {
 
                     <?php } else { ?>
                     <div class="vehicle_status"> <a href="#" class="btn outline btn-xs" style="pointer-events: none">Not Confirm yet</a>
+                    <br /><a href="#" class="btn btn-xs mt-2" style="pointer-events: none">Cancel</a>
                       <div class="clearfix"></div>
                     </div>
                     <?php } ?>

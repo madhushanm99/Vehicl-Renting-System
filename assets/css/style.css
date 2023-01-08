@@ -1,11 +1,6 @@
 @charset "utf-8";
 
 
-
-/*====================
-	1. General code
-==========================*/
-
 body {
 	font-family: 'Lato', sans-serif;
 	margin:0px;
@@ -14,10 +9,6 @@ body {
 	color:#555555;
 }
 
-
-/*----------------------
-	1.1. Typography
-------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
 	color:#111111;
@@ -120,9 +111,6 @@ blockquote {
   margin: 40px auto;
 }
 
-/*-----------------
-	1.2. Button
--------------------------*/
 
 .btn {
   border: medium none;
@@ -348,11 +336,6 @@ blockquote,
 
 }
 
-
-
-/*-------------------------
-	1.3. dark-overlay
----------------------------------*/
 .div_zindex {
   position: relative;
   z-index: 1;
@@ -368,9 +351,6 @@ blockquote,
 }
 
 
-/*-------------------------------------
-	1.4. Space margins and padding
-------------------------------------------------*/
 .padding_none {
 	padding:0px;
 }
@@ -418,11 +398,6 @@ blockquote,
 	margin:0px;
 }
 
-
-
-/*-----------------
-	1.5. Form
----------------------------*/
 
 .form-group {
   margin-bottom: 15px;
@@ -545,10 +520,6 @@ blockquote,
 }
 
 
-/*-----------------
-	1.6. Table
----------------------------*/
-
 table {
 	margin:0 0 30px;
 	width:100%;
@@ -571,10 +542,6 @@ table thead th, table thead td {
 }
 
 
-
-/*-----------------------------------------------------------
-	1.7. Section-background-color & sectino-heading
--------------------------------------------------------------------*/
 .secondary-bg {
 	background-color:#222;
 	color:#fff;
@@ -607,9 +574,6 @@ table thead th, table thead td {
 }
 
 
-/*--------------------
-	1.8 Tabs 
-------------------------------*/
 
 .nav.nav-tabs {
   border: medium none;
@@ -630,10 +594,6 @@ table thead th, table thead td {
   margin-bottom: 0;
 }
 
-
-/*--------------------------------------------
-	1.9. parallex-background
----------------------------------------------------*/
 .parallex-bg {
   background-attachment: fixed;
   background-position: 0 0;
@@ -643,9 +603,6 @@ table thead th, table thead td {
 }
 
 
-/*------------------------
-	1.10. Modal
---------------------------------*/
 .modal-dialog {
   width: 650px;
 }
@@ -675,10 +632,6 @@ table thead th, table thead td {
 
 
 
-
-/*================
-	 2. Header
-===========================*/
 
 .default-header {
   background: #fff none repeat scroll 0 0;
@@ -843,12 +796,6 @@ table thead th, table thead td {
   top: 107%;
 }
 
-
-
-
-/*----------------------------------
-	2.1 Navigation & Dropdown Menu 
-------------------------------------------*/
 #navigation_bar {
   background: #111111 none repeat scroll 0 0;
   border-radius: 0;
@@ -971,15 +918,6 @@ nav.navbar {
 }
 
 
-
-
-/*=======================
-	 3. Home-Page
-================================*/
-
-/*-------------------------
-	3.1. Banner
--------------------------------*/
 .banner-section {
   background-image: url("../images/banner-image-1.jpg");
   background-position: center center;
@@ -1031,10 +969,6 @@ nav.navbar {
 }
 
 
-/*-------------------------
-	3.2. Filter-Form
--------------------------------*/
-
 #filter_form {
 	padding:46px 0;
 }
@@ -1060,10 +994,6 @@ nav.navbar {
 }
 
 
-
-/*-------------------------
-	3.3. About-Us-Section
--------------------------------*/
 .looking-car {
   border: 3px solid #e1e1e1;
   border-radius: 0 30px;
@@ -1095,10 +1025,6 @@ nav.navbar {
 }
 
 
-
-/*-----------------------------
-	3.4. Recently-Listed-Cars
------------------------------------*/
 .recent-tab {
   margin: 0 auto;
   text-align: center;
@@ -1265,401 +1191,6 @@ nav.navbar {
 	   -webkit-transform:translateY(0%);
 	    -ms-transform:translateY(0%);
 }
-
-
-
-/*---------------------
-	3.5. Fun-Facts
------------------------------*/
-.fun-facts-section {
-  background: rgba(0, 0, 0, 0) url("../images/fun-facts-bg.jpg") repeat scroll 0 0;
-  padding: 100px 0;
-  position: relative;
-}
-.fun-facts-m {
-  border-radius: 50%;
-  color: #ffffff;
-  display: table;
-  height: 188px;
-  margin: 0 auto;
-  text-align: center;
-  width: 188px;
-}
-.fun-facts-m .cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-.fun-facts-m h2 {
-  color: #ffffff;
-  margin: 0 auto;
-}
-.fun-facts-m p {
-  font-size: 15px;
-  line-height: 24px;
-  margin: 0 auto;
-}
-.fun-facts-m h2 .fa {
-  display: block;
-}
-
-
-/*----------------------
-	3.6. Featured-Cars
--------------------------------*/
-.featured-car-list {
-  background: #ffffff none repeat scroll 0 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin:0 auto 15px;
-  transition-duration:0.3s;
-   -moz-transition-duration:0.3s;
-    -o-transition-duration:0.3s;
-     -webkit-transition-duration:0.3s;
-      -ms-transition-duration:0.3s;
-}
-.featured-car-list:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-}
-.featured-car-img {
-  position: relative;
-  overflow:hidden;
-}
-.featured-icon {
-  color: #ffffff;
-  font-size: 15px;
-  line-height: 30px;
-  position: absolute;
-  right: -28px;
-  text-align: center;
-  text-transform:capitalize;
-  top: 9px;
-  transform: rotate(45deg);
-  width: 105px;
-}
-.featured-car-content {
-  padding: 20px;
-  overflow:hidden;
-}
-.featured-car-content a {
-  color: #111111;
-}
-.featured-price {
-  font-size: 18px;
-  font-weight: 800;
-}
-.featured-car-content ul {
-  border-top: 1px solid #e7e6e6;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  padding: 20px 0 0;
-}
-.featured-car-content li {
-  float: left;
-  font-size: 13px;
-  list-style: outside none none;
-  margin-bottom: 8px;
-  width: 50%;
-}
-.featured-car-content li .fa {
-  font-size: 15px;
-  margin-right: 8px;
-}
-.price_info {
-	overflow:hidden;
-}	
-.featured-price {
-	float:left;
-	width:50%;
-}
-.price_info .car-location {
-	float:right;
-	margin:0 auto;
-	width:50%;
-}
-.price_info .car-location > span {
-  display: block;
-  line-height: 30px;
-}
-.compare_item {
-  background:rgba(0, 0, 0, 0.8);
-  left: 10px;
-  padding: 0 12px;
-  position: absolute;
-  top: 10px;
-}
-.compare_item .checkbox {
-	margin:4px 0;
-	padding:0px;
-}
-.compare_item .checkbox label {
-	color:#fff;
-    font-weight:400;
-	font-size:13px;
-}
-.compare_item .checkbox label::before {
-  background: #fff none repeat scroll 0 0;
-  border: 0 none;
-  height: 12px;
-  top: 4px;
-  width: 12px;
-}
-.compare_item .checkbox input[type="checkbox"]:checked + label::before {
-  color: #000;
-  font-weight: bold;
-}
-
-
-
-/*---------------------
-	3.7. Trending-Cars
------------------------------*/
-.trending-car-m {
-  position: relative;
-}
-.trending-hover {
-  background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
-  padding: 10%;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 100%;
-  transition-duration: 0.5s;
-   -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-     -webkit-transition-duration: 0.5s;
-      -ms-transition-duration: 0.5s;
-  width: 100%;
-  z-index: 111;
-}
-.trending-car-m:hover .trending-hover {
-	top:0px;
-}
-.trending-hover h4 {
-	position:absolute;
-	margin:0 auto;
-	top:50%;
-	left:15px;
-	right:15px;
-	transform:translateY(-50%);
-	 -moz-transform:translateY(-50%);
-	  -o-transform:translateY(-50%);
-	   -webkit-transform:translateY(-50%);
-	    -ms-transform:translateY(-50%);
-}
-.trending-hover h4 a {
-	color:#fff;
-}
-.owl-pagination {
-	width:100%;
-	display:block;
-	margin:auto;
-	text-align:center
-}
-.owl-pagination .owl-page {
-	height:10px;
-	width:10px;
-	background:#929292;
-	border-radius:50%;
-	display:inline-block;
-	margin:25px 5px 0px;
-}
-.owl-pagination .owl-page.active {
-	height:16px;
-	width:16px;
-	border-radius:50%;
-	position:relative;
-	top:2px;
-}
-
-
-/*--------------------
-	3.8 feedback-Section
------------------------------*/
-.feedback-section {
-  background-image: url("../images/testimonial-bg.jpg");
-}
-.white-text h2 {
-  color: #ffffff;
-}
-.feedback-m {
-  padding-left: 20px;
-  padding-right: 20px;
-  position: relative;
-  z-index: 1;
-}
-.feedback-img {
-  border: 5px solid #ffffff;
-  border-radius: 50%;
-  float: left;
-  height: 215px;
-  left: 30px;
-  overflow: hidden;
-  position: absolute;
-  top: 42px;
-  width: 215px;
-  z-index: 1;
-}
-.feedback-img > img {
-  max-width: 100%;
-}
-.feedback-content {
-  background: #ffffff none repeat scroll 0 0;
-  border-radius: 0 30px;
-  float: right;
-  padding: 35px 35px 35px 92px;
-  position: relative;
-  width: 425px;
-}
-.feedback-content::after {
-  background: rgba(0, 0, 0, 0) url("../images/testimonial-content-bg.jpg") repeat scroll 0 0 / cover ;
-  border-radius: 0 30px;
-  content: "";
-  height: 100%;
-  left: 0;
-  opacity: 0.2;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-}
-.client-designation {
-  color: #555555;
-  font-size: 14px;
-}
-.feedback-heading {
-  margin-bottom: 35px;
-  padding-left: 110px;
-  position: relative;
-}
-.feedback-heading h5 {
-  margin: 0 auto;
-}
-.feedback-heading::after {
-  content: "";
-  font-family: fontawesome;
-  font-size: 100px;
-  left: 0;
-  line-height: 28px;
-  position: absolute;
-  top: 15px;
-  color:rgba(0, 0, 0, 0.1);
-}
-.feedback-content > p {
-  font-size: 14px;
-  line-height: 24px;
-  margin: 0 auto 5px;
-  padding-left: 35px;
-}
-#feedback-slider .owl-pagination .owl-page {
-	background:#fff;
-}
-
-
-
-/*----------------------
-	3.9. Blog-Section
------------------------------*/
-.blog-info-box {
-  position: relative;
-}
-.blog-info-box ul {
-  background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
-  bottom: 0;
-  margin: 0 auto;
-  padding: 0 15px;
-  position: absolute;
-  width: 100%;
-}
-.blog-info-box li {
-  color: #ffffff;
-  display: inline-block;
-  font-size: 13px;
-  line-height: 50px;
-  list-style: outside none none;
-  margin: 0 10px 0 auto;
-}
-.blog-info-box li a{
-  color: #ffffff;
-}
-.blog-info-box li .fa {
-  margin-right: 3px;
-}
-.blog-content {
-  overflow: hidden;
-  padding-top: 25px;
-}
-.blog-content h5 {
-	line-height:26px;	
-}
-.blog-content h5 a {
-	color:#111;	
-}
-.blog-content a i {
-	margin:0px;
-	transition-duration:0.3s;
-	-moz-transition-duration:0.3s;
-	 -o-transition-duration:0.3s;
-	  -webkit-transition-duration:0.3s;
-	   -ms-transition-duration:0.3s;
-}
-.blog-content a:hover i {
-	margin-left:8px;
-}
-
-
-
-/*------------------------
-	3.10. Popular-Brands
---------------------------------*/
-.brand-section {
-  padding: 55px 0;
-}
-.brand-hadding {
-  border-right: 1px solid #bbbbbb;
-  float: left;
-  padding-right: 10px;
-  position: relative;
-  width: 90px;
-}
-#popular_brands div {
-	padding:0 10px;
-}
-.brand-hadding::after {
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #bbbbbb;
-  border-style: solid;
-  border-width: 12px;
-  content: "";
-  position: absolute;
-  right: -24px;
-  top: 50%;
-  transform: translateY(-50%);
-   -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-     -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-}
-.brand-hadding h5 {
-  line-height: 26px;
-  margin: 10px 0;
-}
-.brand-logo-list {
-  float: right;
-  margin: 0 auto;
-  padding: 0 0 0 30px;
-  width: 90%;
-}
-
-.brand-logo-list a img {
-  margin: 0 auto;
-}
-.brand-logo-list .owl-controls.clickable {
-	display:none !important;
-}
-
 
 
 /*-------------------------------------------------
@@ -1830,16 +1361,6 @@ input.newsletter-input {
 	color:#fff;
 }
 
-
-
-
-/*=======================
-	 4. Home-Page-2
-================================*/
-
-
-/*-----------------
-	4.1. Header
 ------------------------*/
 .header_style2 {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
@@ -1901,11 +1422,6 @@ input.newsletter-input {
 	padding:0px;
 }
 
-
-
-/*--------------------
-	4.2. Banner
----------------------------*/
 #banner2 {
 	position:relative;
 }
@@ -1947,10 +1463,6 @@ input.newsletter-input {
   line-height: 22px;
 }
 
-
-/*--------------------
-	4.13. Filter-Form
----------------------------*/
 #filter_form2 {
   margin: -120px 0 -20px;
   position: relative;
@@ -1988,10 +1500,6 @@ form .slider.slider-horizontal {
 }
 
 
-
-/*-----------------
-	4.4. About-us
-------------------------*/
 .about_info {
   background: #ffffff none repeat scroll 0 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -2015,9 +1523,6 @@ form .slider.slider-horizontal {
 }
 
 
-/*-----------------
-	4.5. Fan-Facts
-------------------------*/
 #fun-facts {
 	position:relative;
 }
@@ -2068,11 +1573,6 @@ form .slider.slider-horizontal {
   width: 100%;
 }
 
-
-
-/*-----------------
-	4.6. Our-Services
-------------------------*/
 .services_info {
 	overflow:hidden;
 	margin:30px auto 0;

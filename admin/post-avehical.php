@@ -31,6 +31,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$centrallocking = $_POST['centrallocking'];
 		$crashcensor = $_POST['crashcensor'];
 		$leatherseats = $_POST['leatherseats'];
+		$fee = 100;
 
 		$rand;
 
@@ -90,7 +91,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 // move_uploaded_file($_FILES["img4"]["tmp_name"],"../assets/vimg/".$_FILES["img4"]["name"]);
 // move_uploaded_file($_FILES["img5"]["tmp_name"],"../assets/vimg/".$_FILES["img5"]["name"]);
 
-		$sql = "INSERT INTO tblvehicles(VehiclesTitle,VehiclesBrand,VehiclesOverview,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,AirConditioner,PowerDoorLocks,AntiLockBrakingSystem,BrakeAssist,PowerSteering,DriverAirbag,PassengerAirbag,PowerWindows,CDPlayer,CentralLocking,CrashSensor,LeatherSeats) VALUES(:vehicletitle,:brand,:vehicleoverview,:priceperday,:fueltype,:modelyear,:seatingcapacity,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:airconditioner,:powerdoorlocks,:antilockbrakingsys,:brakeassist,:powersteering,:driverairbag,:passengerairbag,:powerwindow,:cdplayer,:centrallocking,:crashcensor,:leatherseats)";
+		$sql = "INSERT INTO tblvehicles(VehiclesTitle,VehiclesBrand,VehiclesOverview,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,AirConditioner,PowerDoorLocks,AntiLockBrakingSystem,BrakeAssist,PowerSteering,DriverAirbag,PassengerAirbag,PowerWindows,CDPlayer,CentralLocking,CrashSensor,LeatherSeats,service_fee) VALUES(:vehicletitle,:brand,:vehicleoverview,:priceperday,:fueltype,:modelyear,:seatingcapacity,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:airconditioner,:powerdoorlocks,:antilockbrakingsys,:brakeassist,:powersteering,:driverairbag,:passengerairbag,:powerwindow,:cdplayer,:centrallocking,:crashcensor,:leatherseats,:Fee)";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':vehicletitle', $vehicletitle, PDO::PARAM_STR);
 		$query->bindParam(':brand', $brand, PDO::PARAM_STR);
@@ -116,6 +117,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$query->bindParam(':centrallocking', $centrallocking, PDO::PARAM_STR);
 		$query->bindParam(':crashcensor', $crashcensor, PDO::PARAM_STR);
 		$query->bindParam(':leatherseats', $leatherseats, PDO::PARAM_STR);
+		$query->bindParam(':Fee', $fee, PDO::PARAM_STR);
 		$query->execute();
 		$lastInsertId = $dbh->lastInsertId();
 		if ($lastInsertId) {
@@ -123,16 +125,11 @@ if (strlen($_SESSION['alogin']) == 0) {
 		} else {
 			$error = "Something went wrong. Please try again";
 		}
-
 		header("Refresh: 2; URL=" . $_SERVER['HTTP_REFERER']);
-
 	}
-
-
 ?>
 <!doctype html>
 <html lang="en" class="no-js">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
