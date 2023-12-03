@@ -1,5 +1,6 @@
 # Vehicle Renting System
 UOC Group Mini-Project
+
 Overview
 The Vehicle Renting System is a web-based application developed for a university mini-project. It serves as a platform for both vehicle renting companies and third-party vehicle providers to manage and facilitate the renting process. Customers can use the system to find and rent vehicles based on their preferences.
 
